@@ -11,12 +11,12 @@ let g:loaded_sort_folds = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-if !has("python3")
-    echohl WarningMsg
-    echom "SortFolds requires +python."
-    finish
-endif
-
+"if !has("python3")
+"    echohl WarningMsg
+"    echom "SortFolds requires +python."
+"    finish
+"endif
+"
 vnoremap <silent> <Plug>SortFolds :call SortFolds#SortFolds()<CR>
 
 if !hasmapto("<Plug>SortFolds", "v")
